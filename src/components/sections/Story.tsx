@@ -5,7 +5,7 @@ import { fadeInUp } from "@/components/animations/variants";
 
 export default function Story() {
   return (
-    <section id="story" className="relative w-full bg-black py-32">
+    <section id="story" className="relative w-full py-32">
       <div className="mx-auto grid max-w-7xl grid-cols-1 items-center gap-16 px-6 lg:grid-cols-2 lg:px-10">
         {/* Image reveal: a clip-path wipe rather than a plain fade, for a more editorial feel */}
         <motion.div

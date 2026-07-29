@@ -9,7 +9,7 @@ import { testimonials } from "@/data/testimonials";
 
 export default function Testimonials() {
   return (
-    <section id="testimonials" className="w-full bg-black py-32">
+    <section id="testimonials" className="w-full py-32">
       <div className="mx-auto max-w-4xl px-6 text-center lg:px-10">
         <span className="text-xs uppercase tracking-[0.4em] text-amber-200">
           Guest Testimonials

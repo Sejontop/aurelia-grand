@@ -25,7 +25,7 @@ export default function Dining() {
   return (
     <section
       id="dining"
-      className="relative w-full overflow-hidden bg-black py-32"
+      className="relative w-full overflow-hidden py-32"
     >
       {/* Cinematic background image with heavy vignette for text legibility */}
       <div className="absolute inset-0 -z-10">

@@ -15,7 +15,7 @@ export default function Booking() {
   return (
     <section
       id="booking"
-      className="relative w-full overflow-hidden bg-black py-32"
+      className="relative w-full overflow-hidden py-32"
     >
       <div className="absolute inset-0 -z-10">
         <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1582719508461-905c673771fd?q=80&w=2000&auto=format&fit=crop')] bg-cover bg-center opacity-30" />

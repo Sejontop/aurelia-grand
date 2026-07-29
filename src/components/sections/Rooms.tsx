@@ -44,7 +44,7 @@ export default function Rooms() {
     <section
       id="rooms"
       ref={containerRef}
-      className="relative h-screen w-full overflow-hidden bg-black"
+      className="relative h-screen w-full overflow-hidden"
     >
       <div className="absolute top-20 left-6 z-10 lg:left-10">
         <span className="text-xs uppercase tracking-[0.4em] text-amber-200">

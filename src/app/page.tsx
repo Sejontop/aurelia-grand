@@ -15,7 +15,7 @@ import Booking from "@/components/sections/Booking";
 // section IDs instead of navigating.
 export default function Home() {
   return (
-    <main className="relative w-full bg-black">
+    <main className="relative w-full">
       <Navbar />
       <Hero />
       <Story />

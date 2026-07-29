@@ -19,7 +19,7 @@ const TREATMENTS = [
 
 export default function Spa() {
   return (
-    <section id="spa" className="relative w-full bg-black">
+    <section id="spa" className="relative w-full ">
       <div className="mx-auto grid max-w-7xl grid-cols-1 gap-16 px-6 py-32 lg:grid-cols-2 lg:px-10">
         {/* Sticky visual: stays pinned while the treatment list scrolls past it,
             an Apple-style storytelling pattern for long-form pages. */}

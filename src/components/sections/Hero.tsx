@@ -27,7 +27,7 @@ export default function Hero() {
     <section
       id="hero"
       ref={sectionRef}
-      className="relative flex h-screen min-h-[720px] w-full items-center justify-center overflow-hidden bg-black"
+      className="relative flex h-screen min-h-[720px] w-full items-center justify-center overflow-hidden"
     >
       {/* Parallax background layer — replace with next/image or <video> once real assets are ready */}
       <motion.div
