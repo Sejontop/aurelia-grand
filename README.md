@@ -1,9 +1,8 @@
-```md
 # Aurelia Grand
 
-Aurelia Grand is a premium luxury hotel landing page built as a modern single-page application using Next.js and a component-driven architecture.
+Aurelia Grand is a luxury hotel single-page landing website built with modern frontend technologies. The project focuses on creating a premium hospitality experience through cinematic visuals, elegant UI design, smooth animations, and a responsive component-driven architecture.
 
-The website is designed to deliver a high-end hospitality experience through cinematic visuals, elegant typography, smooth animations, and a responsive layout. It features a luxury hero section with a static image fallback and background video experience, along with dedicated sections for rooms, amenities, dining, spa, gallery, testimonials, and booking.
+The website showcases a fictional luxury hotel experience including rooms, amenities, dining, spa services, gallery, testimonials, and booking sections.
 
 ---
 
@@ -12,12 +11,20 @@ The website is designed to deliver a high-end hospitality experience through cin
 🔗 **Live Website:**  
 (Add Vercel deployment link here)
 
+Example:
+
+```
+https://aurelia-grand.vercel.app
+```
+
+---
+
 # Tech Stack
 
 - **Framework:** Next.js 16 (App Router)
 - **Language:** TypeScript
 - **Styling:** Tailwind CSS v4
-- **UI Components:** shadcn/ui
+- **UI Library:** shadcn/ui
 - **Animations:** Framer Motion
 - **Icons:** Lucide React
 - **Deployment:** Vercel
@@ -28,52 +35,54 @@ The website is designed to deliver a high-end hospitality experience through cin
 
 ## Cinematic Hero Section
 
-- Full-screen luxury hotel hero section
+- Full-screen luxury hotel hero experience
 - Background image with video transition support
-- Static image fallback for users with slower internet connections
-- Background video features:
+- Static image fallback for slower internet connections
+- Optimized background video:
   - autoplay
-  - muted playback
-  - infinite looping
-  - smooth fade transition
+  - muted
+  - loop
+  - plays inline
+- Smooth fade transition between image and video
 - Scroll-based parallax effects using Framer Motion
 
 ---
 
-## Responsive Navigation
+## Responsive Design
 
-- Desktop and mobile responsive navbar
-- Smooth scrolling between sections
-- Mobile-friendly layout
+- Fully responsive layout
+- Desktop and mobile navigation
+- Adaptive typography and spacing
+- Tailwind CSS breakpoint system
 
 ---
 
-## Hotel Experience Sections
+## Hotel Showcase Sections
 
 The landing page includes:
 
-- Hero
-- Story
-- Rooms
-- Amenities
-- Dining
-- Spa
-- Gallery
-- Testimonials
-- Booking
+- Hero section
+- Story section
+- Rooms section
+- Amenities section
+- Dining section
+- Spa section
+- Gallery section
+- Testimonials section
+- Booking section
 - Footer
 
-Each section is isolated into a separate reusable component for easier maintenance.
+Each section is developed as an independent reusable component.
 
 ---
 
 ## Room Showcase
 
 - Dynamic room rendering using structured data
-- Reusable `RoomCard` component
-- Horizontal room carousel
+- Reusable RoomCard component
+- Horizontal scrolling room carousel
 - Hover animations
-- Responsive layouts
+- Responsive card layouts
 
 ---
 
@@ -84,23 +93,20 @@ Animations are handled using Framer Motion.
 Reusable animation variants are stored separately:
 
 ```
-
 components/animations/variants.ts
-
 ```
 
-Benefits:
+This provides:
 
-- Consistent animations across the website
-- Cleaner components
-- Easier future customization
+- Consistent animations
+- Cleaner component code
+- Easier animation updates
 
 ---
 
 # Project Structure
 
 ```
-
 src
 │
 ├── app
@@ -151,8 +157,7 @@ src
 │   └── testimonials.ts
 │
 └── lib
-└── utils.ts
-
+    └── utils.ts
 ```
 
 ---
@@ -164,18 +169,16 @@ src
 Location:
 
 ```
-
 src/app
-
 ```
 
 Contains the main Next.js application structure.
 
-### `page.tsx`
+### page.tsx
 
 The main landing page composition file.
 
-It combines all major sections:
+It combines all major website sections:
 
 - Navbar
 - Hero
@@ -191,29 +194,35 @@ It combines all major sections:
 
 ---
 
-# Components Architecture
+# Component Structure
 
-The project follows a modular component structure.
+The project follows a modular component architecture.
 
 ## Layout Components
 
 Location:
 
 ```
-
 components/layout
-
 ```
 
-Contains global reusable components:
+Contains reusable global components.
 
 ### Navbar.tsx
 
-Handles website navigation and section links.
+Handles:
+
+- Navigation links
+- Section scrolling
+- Responsive menu behavior
 
 ### Footer.tsx
 
-Contains the footer layout and supporting information.
+Contains:
+
+- Footer layout
+- Supporting information
+- Brand details
 
 ---
 
@@ -222,30 +231,26 @@ Contains the footer layout and supporting information.
 Location:
 
 ```
-
 components/sections
-
 ```
 
-Each major website area has its own component.
+Each major website section has its own component.
 
 Examples:
 
 ```
-
 Hero.tsx
 Rooms.tsx
 Dining.tsx
 Spa.tsx
 Booking.tsx
-
 ```
 
-Advantages:
+Benefits:
 
-- Easier maintenance
-- Better separation of concerns
-- Components can be updated independently
+- Better maintainability
+- Clear separation of concerns
+- Easier future updates
 
 ---
 
@@ -254,27 +259,23 @@ Advantages:
 Location:
 
 ```
-
 components/cards
-
 ```
 
-Reusable content-based components.
+Reusable content components.
 
 Example:
 
 ```
-
 RoomCard.tsx
-
 ```
 
-Used to display:
+Used for displaying:
 
+- Room image
 - Room category
 - Description
 - Pricing
-- Images
 - Actions
 
 ---
@@ -284,9 +285,7 @@ Used to display:
 Location:
 
 ```
-
 components/ui
-
 ```
 
 Contains reusable shadcn/ui components.
@@ -300,7 +299,7 @@ Examples:
 - Dropdown
 - Sheet
 
-These components provide consistent UI patterns throughout the application.
+These components maintain consistent UI patterns throughout the application.
 
 ---
 
@@ -309,36 +308,30 @@ These components provide consistent UI patterns throughout the application.
 Location:
 
 ```
-
 src/data
-
 ```
 
 Static content is separated from UI components.
 
 ## rooms.ts
 
-Contains hotel room information:
+Stores:
 
-- Room name
-- Category
-- Description
+- Room names
+- Categories
+- Descriptions
 - Pricing
 - Images
 
 ## gallery.ts
 
-Contains gallery images.
+Stores gallery image information.
 
 ## testimonials.ts
 
-Contains guest reviews and testimonials.
+Stores guest testimonials.
 
-This structure keeps components clean and allows future migration to:
-
-- CMS
-- Database
-- External API
+This structure keeps UI components clean and makes future integration with APIs or CMS platforms easier.
 
 ---
 
@@ -352,16 +345,14 @@ Benefits:
 
 - Utility-first styling
 - Responsive design
-- Consistent spacing and colors
+- Consistent spacing system
 - Faster UI development
 
-Global styles are located at:
+Global styles:
 
 ```
-
 src/app/globals.css
-
-````
+```
 
 ---
 
@@ -371,9 +362,9 @@ Clone the repository:
 
 ```bash
 git clone <repository-url>
-````
+```
 
-Navigate to the project:
+Navigate into the project:
 
 ```bash
 cd aurelia-grand
@@ -401,7 +392,7 @@ http://localhost:3000
 
 # Production Build
 
-Create an optimized build:
+Create an optimized production build:
 
 ```bash
 npm run build
@@ -417,54 +408,51 @@ npm run start
 
 # Deployment
 
-The project is optimized for deployment on Vercel.
+The project is optimized for deployment using Vercel.
 
-Deployment process:
+Deployment steps:
 
-1. Push repository to GitHub
-2. Import repository into Vercel
-3. Configure required settings
-4. Deploy
+1. Push the repository to GitHub.
+2. Import the repository into Vercel.
+3. Configure project settings.
+4. Deploy.
 
 ---
 
 # Future Improvements
 
-Possible future enhancements:
+Potential improvements:
 
-* Connect booking system with backend services
-* Integrate CMS for hotel content management
-* Add room availability checking
-* Add online reservation workflow
-* Add multilingual support
-* Optimize all media assets further
-* Add real hotel API integrations
-* Add customer authentication
+- Connect booking section with backend services
+- Add real reservation functionality
+- Integrate CMS for hotel content management
+- Add room availability system
+- Add multilingual support
+- Improve media optimization
+- Integrate real hotel APIs
+- Add authentication system
 
 ---
 
 # Developer Notes
 
-* Built using Next.js App Router architecture.
-* Components are modular and reusable.
-* Data is separated from UI logic.
-* Animations are centralized using Framer Motion variants.
-* Responsive design is implemented using Tailwind CSS breakpoints.
-* The hero section includes performance considerations through image fallback and optimized video loading.
+- Built using Next.js App Router architecture.
+- Components are organized by responsibility.
+- Data is separated from presentation logic.
+- Animations are centralized using Framer Motion.
+- Responsive design is implemented with Tailwind CSS.
+- Hero media loading is optimized with image fallback support.
 
 ---
 
 # Author
-
+Sejal Dashora
 Frontend Development Intern
 
 Built with:
 
-* Next.js
-* TypeScript
-* Tailwind CSS
-* shadcn/ui
-* Framer Motion
-
-```
-```
+- Next.js
+- TypeScript
+- Tailwind CSS
+- shadcn/ui
+- Framer Motion
