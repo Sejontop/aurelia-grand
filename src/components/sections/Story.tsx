@@ -13,11 +13,11 @@ export default function Story() {
         <motion.div
           initial={{ clipPath: "inset(0 0 100% 0)" }}
           whileInView={{ clipPath: "inset(0 0 0% 0)" }}
-          viewport={{ once: true, margin: "-100px" }}
+          viewport={{ once: true, margin: "-50px" }}
           transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1] }}
-          className="relative h-125 overflow-hidden rounded-lg lg:order-2"
+          className="relative h-80 sm:h-96 lg:h-125 overflow-hidden rounded-xl lg:order-2"
         >
-          <div className="absolute inset-0 bg-[url(/our_story_image.jpg)] bg-cover bg-center" />
+          <div className="absolute inset-0 bg-[url('/our_story_image.jpg')] bg-cover bg-top" />
         </motion.div>
 
         <motion.div
