@@ -16,7 +16,7 @@ export default function Gallery() {
           </h2>
         </div>
 
-        <div className="grid auto-rows-[220px] grid-cols-2 gap-4 md:grid-cols-4">
+        <div className="grid auto-rows-55 grid-cols-2 gap-4 md:grid-cols-4">
           {galleryImages.map((img, i) => (
             <motion.div
               key={img.id}

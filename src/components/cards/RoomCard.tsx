@@ -16,14 +16,14 @@ export default function RoomCard({ room, index }: RoomCardProps) {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-100px" }}
       transition={{ duration: 0.7, delay: index * 0.08 }}
-      className="group relative h-[70vh] w-[85vw] flex-shrink-0 overflow-hidden rounded-2xl sm:w-[60vw] lg:w-[38vw]"
+      className="group relative h-[58vh] w-[75vw] shrink-0 overflow-hidden rounded-2xl sm:w-[60vw] lg:w-[38vw]"
     >
       {/* Image scales up on hover for a subtle luxury "zoom" effect */}
       <div
         className="absolute inset-0 bg-cover bg-center transition-transform duration-700 ease-out group-hover:scale-110"
         style={{ backgroundImage: `url(${room.image})` }}
       />
-      <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent" />
+      <div className="absolute inset-0 bg-linear-to-t from-black/90 via-black/20 to-transparent" />
 
       <div className="absolute bottom-0 left-0 w-full p-8">
         <span className="text-xs uppercase tracking-[0.3em] text-amber-200">

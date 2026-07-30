@@ -137,3 +137,12 @@ html {
 section[id] {
   scroll-margin-top: 96px;
 }
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+.scrollbar-hide {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}

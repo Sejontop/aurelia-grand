@@ -9,8 +9,8 @@ import { testimonials } from "@/data/testimonials";
 
 export default function Testimonials() {
   return (
-    <section id="testimonials" className="w-full py-32">
-      <div className="mx-auto max-w-4xl px-6 text-center lg:px-10">
+    <section id="testimonials" className="relative w-full py-32 before:absolute before:inset-0 before:bg-linear-to-b before:from-black/60 before:via-black/40 before:to-transparent">
+      <div className="relative z-10 mx-auto max-w-4xl px-6 text-center lg:px-10">
         <span className="text-xs uppercase tracking-[0.4em] text-amber-200">
           Guest Testimonials
         </span>

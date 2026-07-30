@@ -15,8 +15,8 @@ const AMENITIES = [
 
 export default function Amenities() {
   return (
-    <section id="amenities" className="w-full py-32">
-      <div className="mx-auto max-w-7xl px-6 lg:px-10">
+   <section id="amenities" className="relative w-full py-32 before:absolute before:inset-0 before:bg-black/40">
+      <div className="relative z-10 mx-auto max-w-7xl px-6 lg:px-10">
         <div className="mb-16 text-center">
           <span className="text-xs uppercase tracking-[0.4em] text-amber-200">
             Amenities

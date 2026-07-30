@@ -5,15 +5,17 @@ import { fadeInUp } from "@/components/animations/variants";
 
 export default function Story() {
   return (
-    <section id="story" className="relative w-full py-32">
-      <div className="mx-auto grid max-w-7xl grid-cols-1 items-center gap-16 px-6 lg:grid-cols-2 lg:px-10">
+    // <section id="story" className="relative w-full py-32"> not good contrast
+    <section id="story" className="relative w-full py-32 before:absolute before:inset-0 before:bg-linear-to-r before:from-black/80 before:via-black/40 before:to-transparent">
+      {/* <div className="mx-auto grid max-w-7xl grid-cols-1 items-center gap-16 px-6 lg:grid-cols-2 lg:px-10"> ..not good contrast*/}
+      <div className="relative z-10 mx-auto grid max-w-7xl grid-cols-1 items-center gap-16 px-6 lg:grid-cols-2 lg:px-10">
         {/* Image reveal: a clip-path wipe rather than a plain fade, for a more editorial feel */}
         <motion.div
           initial={{ clipPath: "inset(0 0 100% 0)" }}
           whileInView={{ clipPath: "inset(0 0 0% 0)" }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1] }}
-          className="relative h-[500px] overflow-hidden rounded-lg lg:order-2"
+          className="relative h-125 overflow-hidden rounded-lg lg:order-2"
         >
           <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1564501049412-61c2a3083791?q=80&w=1600&auto=format&fit=crop')] bg-cover bg-center" />
         </motion.div>

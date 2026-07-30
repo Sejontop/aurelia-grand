@@ -199,7 +199,7 @@ export default function Navbar() {
           <Button
             variant="outline"
             onClick={() => scrollDirect("#booking")}
-            className="border-amber-200/40 bg-transparent text-amber-100 hover:bg-amber-200 hover:text-black">
+            className="hover:border-amber-200/40 hover:bg-transparent hover:text-amber-100 bg-amber-200 text-black">
             Reserve
           </Button>
 
@@ -207,7 +207,7 @@ export default function Navbar() {
 
 
 
-        {/* Mobile */}
+        {/* Mobile
         <div className="lg:hidden">
 
           <Sheet
@@ -260,8 +260,89 @@ export default function Navbar() {
           </Sheet>
 
         </div>
+*/}
+        {/* Mobile */}
+<div className="lg:hidden">
+  <Sheet open={mobileOpen} onOpenChange={setMobileOpen}>
+    <SheetTrigger className="text-white transition-colors hover:text-amber-200">
+      <Menu className="h-6 w-6" />
+    </SheetTrigger>
 
-      </div>
+    <SheetContent side="right" className="w-[320px] border-white/10 bg-black/95 px-8 backdrop-blur-xl">
+      <SheetHeader className="border-b border-white/10 pb-6">
+        <SheetTitle className="text-center font-serif text-2xl tracking-[0.2em] text-amber-200">
+          AURELIA GRAND
+        </SheetTitle>
+      </SheetHeader>
+
+      <nav className="mt-8 flex flex-col">
+
+        <a href="#hero" onClick={(e) => scrollToSection(e, "#hero")} className="py-3 text-sm uppercase tracking-[0.15em] text-white/80 transition-colors hover:text-amber-200">
+          Home
+        </a>
+
+        <div className="mt-6 border-t border-white/10 pt-6">
+          <p className="mb-3 text-xs uppercase tracking-[0.25em] text-amber-200/80">
+            Experience
+          </p>
+
+          <div className="flex flex-col gap-3 pl-4">
+            {NAV_DROPDOWNS.experience.map((item) => (
+              <a
+                key={item.href}
+                href={item.href}
+                onClick={(e) => scrollToSection(e, item.href)}
+                className="text-sm text-white/70 transition-colors hover:text-amber-200"
+              >
+                {item.label}
+              </a>
+            ))}
+          </div>
+        </div>
+
+        <div className="mt-6 border-t border-white/10 pt-6">
+          <p className="mb-3 text-xs uppercase tracking-[0.25em] text-amber-200/80">
+            Stay
+          </p>
+
+          <div className="flex flex-col gap-3 pl-4">
+            {NAV_DROPDOWNS.stay.map((item) => (
+              <a
+                key={item.href}
+                href={item.href}
+                onClick={(e) => scrollToSection(e, item.href)}
+                className="text-sm text-white/70 transition-colors hover:text-amber-200"
+              >
+                {item.label}
+              </a>
+            ))}
+          </div>
+        </div>
+
+        <div className="mt-6 border-t border-white/10 pt-6 flex flex-col">
+          {NAV_LINKS.slice(1).map((link) => (
+            <a
+              key={link.href}
+              href={link.href}
+              onClick={(e) => scrollToSection(e, link.href)}
+              className="py-3 text-sm uppercase tracking-[0.15em] text-white/80 transition-colors hover:text-amber-200"
+            >
+              {link.label}
+            </a>
+          ))}
+        </div>
+
+        <div className="mt-8 border-t border-white/10 pt-8">
+          <Button onClick={() => scrollDirect("#booking")} className="h-10 rounded-full bg-amber-200 px-6 text-black transition-colors hover:bg-amber-100 hover:text-black">
+            Reserve
+          </Button>
+        </div>
+
+      </nav>
+    </SheetContent>
+  </Sheet>
+</div>
+      </div> 
     </header>
   );
 }

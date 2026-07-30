@@ -24,9 +24,9 @@ export default function Spa() {
         {/* Sticky visual: stays pinned while the treatment list scrolls past it,
             an Apple-style storytelling pattern for long-form pages. */}
         <div className="lg:sticky lg:top-24 lg:h-[70vh]">
-          <div className="relative h-[400px] overflow-hidden rounded-lg lg:h-full">
+          <div className="relative h-100 overflow-hidden rounded-lg lg:h-full">
             <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1544161515-4ab6ce6db874?q=80&w=1600&auto=format&fit=crop')] bg-cover bg-center" />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+            <div className="absolute inset-0 bg-linear-to-t from-black/60 to-transparent" />
           </div>
         </div>
 
