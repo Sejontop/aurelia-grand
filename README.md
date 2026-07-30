@@ -9,15 +9,7 @@ The website showcases a fictional luxury hotel experience including rooms, ameni
 ## Live Demo
 
 🔗 **Live Website:**  
-(Add Vercel deployment link here)
-
-Example:
-
-```
-https://aurelia-grand.vercel.app
-```
-
----
+[(Vercel Link)](https://aurelia-grand-gamma.vercel.app/)
 
 # Tech Stack
 
@@ -361,7 +353,7 @@ src/app/globals.css
 Clone the repository:
 
 ```bash
-git clone <repository-url>
+git clone https://github.com/Sejontop/aurelia-grand.git
 ```
 
 Navigate into the project:
