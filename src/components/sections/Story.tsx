@@ -17,7 +17,7 @@ export default function Story() {
           transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1] }}
           className="relative h-125 overflow-hidden rounded-lg lg:order-2"
         >
-          <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1564501049412-61c2a3083791?q=80&w=1600&auto=format&fit=crop')] bg-cover bg-center" />
+          <div className="absolute inset-0 bg-[url(/our_story_image.jpg)] bg-cover bg-center" />
         </motion.div>
 
         <motion.div

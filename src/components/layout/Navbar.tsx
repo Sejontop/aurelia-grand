@@ -205,62 +205,6 @@ export default function Navbar() {
 
         </nav>
 
-
-
-        {/* Mobile
-        <div className="lg:hidden">
-
-          <Sheet
-            open={mobileOpen}
-            onOpenChange={setMobileOpen}
-          >
-
-            <SheetTrigger className="text-white">
-              <Menu />
-            </SheetTrigger>
-
-
-            <SheetContent
-              side="right"
-              className="border-white/10 bg-black/95 backdrop-blur-xl">
-
-              <SheetHeader>
-                <SheetTitle
-                  className="font-serif tracking-[0.2em] text-amber-200">
-                  AURELIA GRAND
-                </SheetTitle>
-              </SheetHeader>
-
-
-              <nav
-                className="mt-10 flex flex-col gap-6">
-
-                {[
-                  ...NAV_LINKS,
-                  ...NAV_DROPDOWNS.experience,
-                  ...NAV_DROPDOWNS.stay,
-                ].map((link) => (
-                  <NavItem
-                    key={link.href}
-                    {...link}
-                  />
-                ))}
-
-
-                <Button
-                  onClick={() => scrollDirect("#booking")}
-                  className="mt-4 bg-amber-200 text-black">
-                  Reserve
-                </Button>
-
-              </nav>
-
-            </SheetContent>
-
-          </Sheet>
-
-        </div>
-*/}
         {/* Mobile */}
 <div className="lg:hidden">
   <Sheet open={mobileOpen} onOpenChange={setMobileOpen}>
@@ -268,14 +212,14 @@ export default function Navbar() {
       <Menu className="h-6 w-6" />
     </SheetTrigger>
 
-    <SheetContent side="right" className="w-[320px] border-white/10 bg-black/95 px-8 backdrop-blur-xl">
+    <SheetContent side="right" className="flex h-screen w-[320px] flex-col border-white/10 bg-black/95 px-8 backdrop-blur-xl">
       <SheetHeader className="border-b border-white/10 pb-6">
         <SheetTitle className="text-center font-serif text-2xl tracking-[0.2em] text-amber-200">
           AURELIA GRAND
         </SheetTitle>
       </SheetHeader>
 
-      <nav className="mt-8 flex flex-col">
+      <nav className="mt-8 flex-1 overflow-y-auto pb-8">
 
         <a href="#hero" onClick={(e) => scrollToSection(e, "#hero")} className="py-3 text-sm uppercase tracking-[0.15em] text-white/80 transition-colors hover:text-amber-200">
           Home
@@ -331,14 +275,12 @@ export default function Navbar() {
             </a>
           ))}
         </div>
-
+      </nav>
         <div className="mt-8 border-t border-white/10 pt-8">
           <Button onClick={() => scrollDirect("#booking")} className="h-10 rounded-full bg-amber-200 px-6 text-black transition-colors hover:bg-amber-100 hover:text-black">
             Reserve
           </Button>
         </div>
-
-      </nav>
     </SheetContent>
   </Sheet>
 </div>
